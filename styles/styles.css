@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #fb0000;
+}
+
+.grid > div{
+    background-color: #cccccc;
+    border: 1px solid #af0000;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 20% 50% 20%;
+}

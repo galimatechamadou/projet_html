@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(236, 236, 236);
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    background: url('../images/8.jpg') no-repeat center fixed;
+    background-size: cover;
+}
+div#container {
+    width: 1024px;
+    margin: 0 auto;
+    border: 1px solid;
+    border: 12px solid red;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    font-family: sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+}
+.slogan {
+    text-transform: uppercase;
+}
+.form-wrapper {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+input[type="text"] {
+    width: 300px;
+    height: 25px;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid #cfcccc;
+}

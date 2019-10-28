@@ -1,0 +1,57 @@
+:root{
+    --color: #0e11c3;
+    --border: 4px dashed #ddaa22;
+}
+body{
+    /* background: blue */
+    font-family: sans-serif;
+   /*  overflow: hidden; */
+   font-size: 16px;
+   max-width: 100vw;
+   overflow-x: hidden;
+}
+h1{
+    font-size: 14px;
+    font-weight: 100;
+}
+
+header{
+    border: var(--border);
+    background-image: url('../images/computer.jpg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 10%;
+    height: 1000px;
+    font-size: 4px;
+    background-color: var(--color);
+
+}
+.description{
+    height: 100vh;
+    width: 100vw;
+    color: #ffffff;
+    background-color: var(--color);
+    font-size: 1.9rem;
+    border: var(--border);
+}
+.independant{
+    /* position: absolute; */
+    font-size: 1rem;
+    background-color: var(--color);
+}
+#realisation{
+    width: 100vw;
+    background: white;
+    display: flex;
+    height: 100vh;
+
+}
+#realisation > div{
+    max-width: 12vw;
+    border: 1px solid green;
+    overflow: hidden;
+    height: 150px;
+}
+#realisation > div img{
+    width: 120px;
+}
