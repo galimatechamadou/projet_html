@@ -1,0 +1,38 @@
+let formulaire_message = document.getElementById("message_form");
+let inputs = document.getElementsByTagName("input");
+let textarea_message = document.getElementById("message");
+let error_div = document.getElementById("error");
+
+formulaire_message.addEventListener("submit", function(e) {
+  e.preventDefault();
+  let message_erreurs = [];
+  for (let i = 0; i < inputs.length; i++) {
+    if (inputs[i].value == "") {
+      message_erreurs.push("Veuillez reseigner les champs");
+      break;
+    }
+  }
+  if (textarea_message.value == "") {
+    message_erreurs.push("Veuillez renseigner le message");
+  } else if (textarea_message.value.length <= 3) {
+    message_erreurs.push(
+      "Veuillez ecrire un message avec plus de trois caracteres"
+    );
+  }
+  if (inputs[1].value != inputs[2].value) {
+    message_erreurs.push("Les adresse email ne sont pas identiques");
+  }
+
+  /*  console.log(`Longueur du tablo = ${message_erreurs.length}`);
+   */
+  if (message_erreurs.length == 0) {
+    error_div.innerHTML =
+      "<div class='alert alert-success'>Vos donnees ont ete enregistrees</div>";
+  } else {
+    let message_variable = "";
+    for (let i = 0; i < message_erreurs.length; i++) {
+      message_variable += `<div class="alert alert-danger">${message_erreurs[i]}</div>`;
+    }
+    error_div.innerHTML = message_variable;
+  }
+});
